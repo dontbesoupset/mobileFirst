@@ -1,0 +1,134 @@
+@import 'var';
+@import 'fonts';
+
+/*чтобы паддинги и бордеры не влияли
+  на ширину блоков*/
+html {
+    box-sizing: border-box;
+}
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        padding: 0 110px;
+    }
+}
+
+.header {
+    background-color: #fff;
+    &__inner {
+        min-height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-tablet {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        &__inner {
+            min-height: 80px;
+        }
+        .logo-2, .logo {
+            display: none;
+        }
+        .logo-tablet {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        &__inner {
+            min-height: 80px;
+        }
+        .logo-2, .logo {
+            display: none;
+        }
+        .logo-tablet {
+            display: block;
+        }
+    }
+}
+
+.menu__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: none;
+    position: relative;
+    &::after {
+        content: "";
+        height: 2px;
+        width: 24px;
+        border-radius: 1px;
+        background-color: #000;
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        box-shadow: 0 4px 0 0 #000, 0 8px 0 0 #000;
+    }
+
+}
+
+.menu__catalog {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .menu__btn {
+        display: none;
+    }
+    .menu__catalog {
+        display: flex;
+        justify-content: space-between;
+        font-family: $heading-font;
+        font-size: $nav-font-size;
+        font-weight: 1000;
+        min-width: 440px;
+        &___item:hover {
+            border-bottom: solid 1px $accent;
+        }
+    }
+}
+
+@media (min-width:1440px) {
+    .menu__btn {
+        display: none;
+    }
+    .menu__catalog {
+        background-color: $accent;
+        display: flex;
+        justify-content: space-between;
+        color:#fff;
+        font-family: $heading-font;
+        font-size: 20px;
+        font-weight: 400;
+        min-width: 478px;
+        &___item:hover {
+            border-bottom: solid 1px #fff;
+        }
+    }
+}
