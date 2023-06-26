@@ -146,6 +146,7 @@ body {
   color: #fff;
   margin-top: 27px;
   margin-bottom: 25px;
+  max-width: 200px;
   text-align: center;
 }
 .head___lowerheading {
@@ -273,7 +274,7 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  min-width: 414px;
+  min-width: 320px;
   background: url(/img/index-background-mobile\ 1.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -288,6 +289,119 @@ body {
   }
   .tablet-prod {
     width: 709px;
+  }
+}
+.cat-cards___card {
+  background-color: #EAEAEA;
+  margin: 20px 0;
+  padding: 20px;
+}
+.cat-cards____title {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .cat-cards-tablet .cat-cards___card {
+    display: flex;
+  }
+}
+@media (min-width: 1440px) {
+  section.cat-cards-tablet {
+    display: none;
+  }
+  section.cat-cards {
+    display: block;
+  }
+  section.cat-cards___card {
+    max-width: 570px;
+  }
+  .cat-cards__inner {
+    display: flex;
+  }
+  .cat-cards___card {
+    margin: 80px;
+    min-width: 570px;
+  }
+}
+.title-card {
+  margin-left: 11px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+@media (min-width: 768px) {
+  .title-card {
+    text-decoration: none;
+    color: #000;
+    font-family: "Oswald", sans-serif;
+    margin: 50px 0;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .title-card {
+    text-decoration: none;
+    color: #000;
+    font-family: "Oswald", sans-serif;
+    margin: 50px 0;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 30px;
+    padding: 0 50px;
+  }
+}
+.card-text {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.cat-cards___line {
+  background: url(/img/Line\ 18.svg);
+  min-height: 2px;
+  margin: 20px 0;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #000;
+  font-family: "Oswald", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .card-link {
+    text-decoration: none;
+    color: #000;
+    font-family: "Oswald", sans-serif;
+    margin: 50px 0;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+}
+.cat-cards-tablet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .cat-cards {
+    display: none;
+  }
+  .cat-cards-tablet {
+    display: block;
+  }
+  .tablet-card {
+    width: 200px;
+    height: 211px;
+    margin: 80px 19px;
+  }
+  .cat-cards__first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
