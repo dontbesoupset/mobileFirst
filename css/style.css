@@ -4,6 +4,8 @@
   на ширину блоков*/
 html {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 *, *::after, *::before {
@@ -13,6 +15,10 @@ html {
 body {
   min-width: 320px;
   overflow-x: hidden;
+}
+
+.background-cat {
+  background: none;
 }
 
 .container {
@@ -52,8 +58,14 @@ body {
   .header .logo-tablet {
     display: block;
   }
+  .background-cat {
+    background: none;
+  }
 }
 @media (min-width: 1440px) {
+  .header {
+    background-color: transparent;
+  }
   .header__inner {
     min-height: 80px;
   }
@@ -75,7 +87,7 @@ body {
 .menu__btn::after {
   content: "";
   height: 2px;
-  width: 24px;
+  width: 20px;
   border-radius: 1px;
   background-color: #000;
   position: absolute;
@@ -109,16 +121,172 @@ body {
     display: none;
   }
   .menu__catalog {
-    background-color: #68B738;
     display: flex;
     justify-content: space-between;
-    color: #fff;
+    color: transparent;
     font-family: "Oswald", sans-serif;
     font-size: 20px;
     font-weight: 400;
     min-width: 478px;
+    color: #fff;
   }
   .menu__catalog___item:hover {
     border-bottom: solid 1px #fff;
+  }
+}
+.head__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.head___mainheading {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 27px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.head___lowerheading {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0;
+  color: #fff;
+}
+.head___select-programm {
+  height: 40px;
+  width: 280px;
+  background-color: #68B738;
+  color: #fff;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+}
+
+.tablet-prod {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .head .mobile-prod {
+    display: none;
+  }
+  .head .tablet-prod {
+    display: block;
+    margin: 0 auto;
+  }
+  .head__inner {
+    background: url(/img/index-can-tablet\ 1.png);
+    background-size: contain;
+    min-height: 909px;
+    background-position: 19px 250px;
+    background-position-y: 200px;
+    background-repeat: no-repeat;
+  }
+  .head___mainheading {
+    font-family: "Oswald", sans-serif;
+    font-size: 60pxpx;
+    font-weight: 600;
+    color: #000;
+    margin-top: 27px;
+    margin-bottom: 25px;
+    max-width: 300px;
+    text-align: left;
+  }
+  .head___p {
+    align-items: flex-start;
+    position: relative;
+  }
+  .head___lowerheading {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+    color: #000;
+  }
+  .head___select-programm {
+    height: 54px;
+    width: 244px;
+    background-color: #68B738;
+    color: #fff;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    margin-top: 50px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 1440px) {
+  .background-cat {
+    background: url(/img/index-background-desktop.png);
+    min-height: 696px;
+    align-items: left;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+  .head__inner {
+    background: url(/img/index-can.png);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .head___mainheading {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    padding-left: 70px;
+    min-width: 440px;
+    color: #000;
+    margin-top: 120px;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  .head___lowerheading {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0;
+    font-weight: 500;
+    padding-left: 70px;
+    color: #000;
+  }
+  .head___select-programm {
+    height: 54px;
+    width: 244px;
+    margin-left: 70px;
+    background-color: #68B738;
+    color: #fff;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+  }
+}
+.head__cat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  min-width: 414px;
+  background: url(/img/index-background-mobile\ 1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .head__cat {
+    background: none;
+    width: 83px;
+    align-items: flex-start;
+    padding-left: 117px;
+  }
+  .tablet-prod {
+    width: 709px;
   }
 }/*# sourceMappingURL=style.css.map */
