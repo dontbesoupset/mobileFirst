@@ -403,4 +403,32 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+}
+.how-works___title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+}
+
+@media (min-width: 768px) {
+  .how-works___mini-cards {
+    display: flex;
+  }
+}
+.how-works___mini-card {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .how-works___mini-card {
+    flex-direction: column;
+    width: 230px;
+    height: 280px;
+  }
+}
+.how-works___mini-card-text {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  line-height: 18px;
+  padding-left: 20px;
 }/*# sourceMappingURL=style.css.map */

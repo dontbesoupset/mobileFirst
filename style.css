@@ -318,6 +318,7 @@ body {
   }
   .cat-cards__inner {
     display: flex;
+    justify-content: space-around;
   }
   .cat-cards___card {
     margin: 80px;
@@ -402,6 +403,75 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+.how-works___title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+}
+
+@media (min-width: 768px) {
+  .how-works___mini-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 130px;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1440px) {
+  .how-works___mini-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 62px;
+    flex-wrap: wrap;
+  }
+}
+.how-works___mini-card {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .how-works___mini-card {
+    width: 250px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .how-works___mini-card:first-of-type {
+    background: url(/img/1.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .how-works___mini-card:nth-of-type(2) {
+    background: url(/img/2.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .how-works___mini-card:nth-of-type(3) {
+    background: url(/img/3.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .how-works___mini-card:nth-of-type(4) {
+    background: url(/img/4.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+.how-works___mini-card-text {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  line-height: 18px;
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .how-works___mini-card-text {
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
