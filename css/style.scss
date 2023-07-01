@@ -71,6 +71,7 @@ body {
 @media (min-width: 1440px) {
     .header {
         background-color: transparent;
+        padding: 0 110px;
         &__inner {
             min-height: 80px;
         }
@@ -246,6 +247,7 @@ body {
         background-position: right;
         background-size: contain;
     }
+
     .head {
         &__inner {
             background: url(/img/index-can.png);
@@ -273,9 +275,11 @@ body {
             font-family: $heading-font;
             font-size: 20px;
             font-weight: 400;
-            margin-top: 0;
-            font-weight: 500;
-            padding-left: 70px;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-left: 70px;
+            min-width: 280px;
             color: #000;
         }
         &___select-programm {
@@ -527,15 +531,24 @@ body {
     }
 }
 
-.live-example-tablet {
+.live-example-tablet, .live-example-pc {
     display: none;
 }
 
 @media (min-width:768px) {
-    .live-example{
+    .live-example, .live-example-pc{
         display: none;
     }
     .live-example-tablet {
+        display: block;
+    }
+}
+
+@media (min-width:1440px) {
+    .live-example-tablet, .section.live-example {
+        display: none;
+    }
+    .live-example-pc {
         display: block;
     }
 }
@@ -775,4 +788,57 @@ body {
       }
       
 
+}
+
+@media (min-width:1440px) {
+    .live-example-pc {
+        .live-example__inner {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            background-image: linear-gradient(transparent 200px, $section-grey 10px);
+        }
+
+        .live-example___title-text {
+            font-family: $heading-font;
+            padding-bottom: 100px;
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 60px;
+        }
+        .live-example___text{
+            max-width: 436px;
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 70px;
+        }
+
+        .live-example___params {
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            height: 7px;
+            width: 428px;
+            background: #DCDCDC;
+            border-radius: 5px;
+            background-size: 70% 100%;
+            background-repeat: no-repeat;
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-image: url(/img/slider\ control.svg);
+                background-size: contain;
+                cursor: ew-resize;
+                box-shadow: 0 0 2px 0 #555
+            }
+          }
+        
+    }
 }
