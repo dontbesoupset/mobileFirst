@@ -428,6 +428,11 @@ body {
     gap: 62px;
     flex-wrap: wrap;
   }
+  .how-works___title {
+    font-family: "Oswald", sans-serif;
+    margin-left: 80px;
+    font-size: 36px;
+  }
 }
 .how-works___mini-card {
   display: flex;
@@ -834,6 +839,44 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer___logo, .footer___socials {
+  margin: 30px;
+}
+.footer .line {
+  background: url(/img/Line\ 18.svg);
+  width: 100%;
+  height: 2px;
+}
+.footer___socials {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+}
+.footer___socials-item {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    padding: 0;
+  }
+  .footer__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .footer .line {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

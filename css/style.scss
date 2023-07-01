@@ -467,6 +467,13 @@ body {
         gap: 62px;
         flex-wrap: wrap;
     }
+    .how-works {
+        &___title {
+            font-family: $heading-font;
+            margin-left: 80px;
+            font-size: 36px;
+        }
+    }
 }
 
 .how-works___mini-card {
@@ -926,5 +933,46 @@ body {
         margin: 0 auto;
         display: flex;
         justify-content: center;
+    }
+}
+
+.footer {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &___logo, &___socials {
+        margin: 30px;
+    }
+    .line {
+        background: url(/img/Line\ 18.svg);
+        width: 100%;
+        height: 2px;
+    }
+    &___socials {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        align-items: center;
+    }
+    &___socials-item {
+        text-decoration: none;
+    }
+}
+@media (min-width:768px) {
+    .footer {
+        .container {
+            padding: 0;
+        }
+        &__inner {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .line {
+            display: none;
+        }
     }
 }
